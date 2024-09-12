@@ -2,32 +2,32 @@
 
 /* Header */
 .custom-header {
-    background-color: #7727B9; /* Morado */
+    background-color: #7727B9; 
     color: white;
 }
 
 /* Fondo de la página */
 body {
-    background-color: #F9F9F9; /* Blanco Hueso */
-    color: #2D3436; /* Charcoal */
+    background-color: #F9F9F9; 
+    color: #2D3436; 
 }
 
 /* Estilos para el botón de alternar tema en la barra de navegación */
 .navbar .btn {
-    background-color: transparent; /* Fondo transparente */
-    border: 2px solid white; /* Borde blanco para el recuadro */
+    background-color: transparent; 
+    border: 2px solid white; 
     border-radius: 5px;
     padding: 5px 10px;
 }
 
 .navbar .btn i {
-    color: white; /* Ícono blanco */
+    color: white; 
     font-size: 1.2rem;
 }
 
 .navbar .btn:hover {
     background-color: white;
-    color: #7727B9; /* Morado */
+    color: #7727B9; 
 }
 
 .navbar .btn:hover i {
@@ -46,11 +46,11 @@ body {
 }
 
 .card-text {
-    color: #7B8A8A; /* Gris oscuro */
+    color: #7B8A8A; 
 }
 
 .btn-primary {
-    background-color: #7727B9; /* Morado */
+    background-color: #7727B9; 
     border-color: #7727B9;
 }
 

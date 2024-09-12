@@ -1,18 +1,3 @@
-// Script para posibles interacciones en el sitio web
-
-// Ejemplo de función para agregar un producto al carrito de compras
-function agregarAlCarrito(productoId) {
-    alert("Producto " + productoId + " agregado al carrito.");
-}
-
-// Asignar la función al botón de "Agregar al Carrito"
-document.querySelectorAll('.btn-success').forEach(function(button) {
-    button.addEventListener('click', function() {
-        const productoId = this.parentElement.querySelector('h2').textContent;
-        agregarAlCarrito(productoId);
-    });
-});
-
 // modo oscuro
 const temaOscuro = () => {
     document.querySelector("body").setAttribute("data-bs-theme","dark");
