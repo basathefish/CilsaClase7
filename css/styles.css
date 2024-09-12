@@ -1,0 +1,112 @@
+/* Estilos generales */
+
+/* Header */
+.custom-header {
+    background-color: #7727B9; /* Morado */
+    color: white;
+}
+
+/* Fondo de la página */
+body {
+    background-color: #F9F9F9; /* Blanco Hueso */
+    color: #2D3436; /* Charcoal */
+}
+
+/* Estilos para el botón de alternar tema en la barra de navegación */
+.navbar .btn {
+    background-color: transparent; /* Fondo transparente */
+    border: 2px solid white; /* Borde blanco para el recuadro */
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.navbar .btn i {
+    color: white; /* Ícono blanco */
+    font-size: 1.2rem;
+}
+
+.navbar .btn:hover {
+    background-color: white;
+    color: #7727B9; /* Morado */
+}
+
+.navbar .btn:hover i {
+    color: #7727B9; /* Ícono cambia a morado */
+}
+
+/* Tarjetas de productos */
+.card {
+    border: none;
+    background-color: white;
+    color: #2D3436;
+}
+
+.card-title {
+    color: #2D3436;
+}
+
+.card-text {
+    color: #7B8A8A; /* Gris oscuro */
+}
+
+.btn-primary {
+    background-color: #7727B9; /* Morado */
+    border-color: #7727B9;
+}
+
+.btn-primary:hover {
+    background-color: #551080; /* Morado más oscuro */
+    border-color: #551080;
+}
+
+/* Footer */
+.custom-footer {
+    background-color: #7727B9;
+    color: white;
+}
+
+/* Carrusel */
+.carousel-inner {
+    width: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: contain;
+}
+
+/* Flechas de navegación del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; 
+    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+/* Modo claro (por defecto) */
+body[data-bs-theme="light"] {
+    background-color: #F9F9F9;
+    color: #2D3436;
+}
+
+/* Modo oscuro */
+body[data-bs-theme="dark"] {
+    background-color: #2D3436;
+    color: #F9F9F9;
+}
+
+.navbar-dark {
+    background-color: #1B1B1B;
+}
