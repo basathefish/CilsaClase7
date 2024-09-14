@@ -1,18 +1,21 @@
 /* Estilos generales */
+body[data-bs-theme="light"] {
+    background-color: #F9F9F9;
+    color: #2D3436;
+}
+
+body[data-bs-theme="dark"] {
+    background-color: #2D3436;
+    color: #F9F9F9;
+}
 
 /* Header */
-.custom-header {
+.custom-header, .custom-footer {
     background-color: #7727B9; 
     color: white;
 }
 
-/* Fondo de la página */
-body {
-    background-color: #F9F9F9; 
-    color: #2D3436; 
-}
-
-/* Estilos para el botón de alternar tema en la barra de navegación */
+/* Navbar */
 .navbar .btn {
     background-color: transparent; 
     border: 2px solid white; 
@@ -31,14 +34,81 @@ body {
 }
 
 .navbar .btn:hover i {
-    color: #7727B9; /* Ícono cambia a morado */
+    color: #7727B9;
+}
+
+/* Navbar oscuro */
+.navbar-dark {
+    background-color: #1B1B1B;
+}
+
+/* Carrusel */
+.carousel-inner {
+    width: 100%;
+}
+
+.carousel-item img {
+    width: 100%; 
+    height: auto; 
+    object-fit: contain; 
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    max-height: 60vh;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 8%; 
+    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(9, 4, 4, 0.5);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    background-size: 120%;
+}
+
+/* Carrusel - captions */
+.carousel-caption {
+    padding: 1rem;
+    border-radius: 5px;
+    width: auto;
+    max-width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body[data-bs-theme="light"] .carousel-caption {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #2D3436;
+}
+
+body[data-bs-theme="dark"] .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #F9F9F9;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+body[data-bs-theme="dark"] .carousel-caption h5, 
+body[data-bs-theme="dark"] .carousel-caption p {
+    color: #F9F9F9;
 }
 
 /* Tarjetas de productos */
 .card {
-    border: none;
     background-color: white;
     color: #2D3436;
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card-title {
@@ -49,64 +119,46 @@ body {
     color: #7B8A8A; 
 }
 
-.btn-primary {
-    background-color: #7727B9; 
-    border-color: #7727B9;
-}
-
-.btn-primary:hover {
-    background-color: #551080; /* Morado más oscuro */
-    border-color: #551080;
-}
-
-/* Footer */
-.custom-footer {
-    background-color: #7727B9;
-    color: white;
-}
-
-/* Carrusel */
-.carousel-inner {
-    width: 100%;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: auto;
-    max-height: 60vh;
-    object-fit: contain;
-}
-
-/* Flechas de navegación del carrusel */
-.carousel-control-prev,
-.carousel-control-next {
-    width: 5%; 
-    height: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-}
-
-/* Modo claro (por defecto) */
-body[data-bs-theme="light"] {
-    background-color: #F9F9F9;
-    color: #2D3436;
-}
-
-/* Modo oscuro */
-body[data-bs-theme="dark"] {
-    background-color: #2D3436;
+body[data-bs-theme="dark"] .card {
+    background-color: #2D2F36; 
+    border: 1px solid #F0F4F8;
     color: #F9F9F9;
 }
 
-.navbar-dark {
-    background-color: #1B1B1B;
+body[data-bs-theme="dark"] .card-title, 
+body[data-bs-theme="dark"] .card-text {
+    color: #F9F9F9;
+}
+
+/* Hover en tarjetas */
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body[data-bs-theme="dark"] .card:hover {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Botones primarios */
+body[data-bs-theme="light"] .btn-primary {
+    background-color: #7727B9;
+    border-color: #7727B9;
+    color: white;
+}
+
+body[data-bs-theme="light"] .btn-primary:hover {
+    background-color: #551080;
+    border-color: #551080;
+}
+
+body[data-bs-theme="dark"] .btn-primary {
+    background-color: #7727B9;
+    border-color: #7727B9;
+    color: white;
+}
+
+body[data-bs-theme="dark"] .btn-primary:hover {
+    background-color: #551080;
+    border-color: #551080;
 }
