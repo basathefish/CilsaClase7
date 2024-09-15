@@ -1,15 +1,23 @@
-.figure-aspect{
+
+.figure-aspect-primary-big{
+    width: 380px;
+    height: 480px;
+}
+
+#thumbnail{
     cursor: pointer;
+    outline: invert;
     transition: background 0.3s, outline 0.3s;
 }
 
-.figure-aspect:hover{
-    background-color: #fdfdfd;
+#thumbnail:hover{
+    background-color: #000000;
     outline: 1px solid #000;
 }
 
-.figure-aspect-primary{
-    max-width: 370px;
+.thumbnail, .figure-aspect-primary{
+    height: 100%;
+    object-fit: cover;
 }
 
 /*Select div with aria-label*/
@@ -26,12 +34,16 @@ div[aria-label="Buttons information"]{
     height: 90px;
 }
 
-@media (max-width: 768px){
-    .figure-aspect-primary{
-        width: 100%;
-    }
-}
-
 .hidden{
     display: none;
+}
+
+@media (max-width: 768px){
+    .figure-aspect-primary-big{
+        max-width: 350px;
+    }
+    .figure-aspect-square{
+        width: 40px;
+        height: 0px;
+    }
 }
