@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ElectroHub - Detalle del Producto</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/detalle.css" />
+  </head>
+
+  <body data-bs-theme="light">
+    <header class="custom-header text-white text-center py-3">
+      <h1>ElectroHub</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Inicio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Categorías
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="categoria-1.html"
+                    >Computación</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="categoria-2.html"
+                    >Audio y video</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="preguntas-frecuentes.html"
+                >Preguntas Frecuentes</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="carrito.html">
+                <i class="bi bi-cart" aria-label="Carrito de compras"></i>
+                <span class="badge bg-light text-dark ms-2" id="cartCount"
+                  >0</span
+                >
+              </a>
+            </li>
+          </ul>
+          <button
+            onclick="cambiarTema()"
+            class="btn ms-2"
+            aria-label="Cambiar tema"
+          >
+            <i id="dl-icon" class="bi bi-moon-fill"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container mx-auto p-10">
+      <div
+        class="d-flex flex-column flex-md-row justify-content-center gap-3 p-4"
+      >
+        <div
+          class="d-flex gap-3 align-items-center justify-content-around flex-column flex-xl-row-reverse mb-4 p-3"
+        >
+          <figure
+            class="figure-aspect-primary-big figure figure-aspect d-flex justify-content-center p-2 m-0 rounded"
+          >
+            <img
+              id="main-image"
+              src="/images/product/phone-1.webp"
+              alt="iPhone 13"
+              class="figure-aspect-primary figure-img img-fluid rounded m-0"
+            />
+          </figure>
+          <div
+            class="d-flex justify-content-around gap-3 flex-xl-column justify-content-md-start"
+          >
+            <figure
+              class="figure figure-aspect position-relative d-flex p-1 m-0 rounded"
+            >
+              <img
+                id="thumbnail"
+                src="/images/product/phone-1.webp"
+                alt="iPhone 13"
+                class="figure-aspect-square figure-img img-fluid rounded m-0"
+              />
+            </figure>
+            <figure
+              class="figure figure-aspect position-relative d-flex p-1 m-0 rounded"
+            >
+              <img
+                id="thumbnail"
+                src="/images/product/phone-2.webp"
+                alt="iPhone 13 back view"
+                class="figure-aspect-square figure-img img-fluid rounded"
+              />
+            </figure>
+            <figure
+              class="figure figure-aspect position-relative d-flex p-1 m-0 rounded"
+            >
+              <img
+                id="thumbnail"
+                src="/images/product/phone-3.webp"
+                alt="iPhone 13 side view"
+                class="figure-aspect-square figure-img img-fluid rounded"
+              />
+            </figure>
+            <figure
+              class="figure figure-aspect position-relative d-flex p-1 m-0 rounded"
+            >
+              <img
+                id="thumbnail"
+                src="/images/product/phone-4.webp"
+                alt="iPhone 13 camera view"
+                class="figure-aspect-square figure-img img-fluid rounded"
+              />
+            </figure>
+          </div>
+        </div>
+        <div class="">
+          <div
+            class="d-flex flex-column justify-content-center align-items-start"
+          >
+            <h1 class="fw-bolder fs-1 mb-2">iPhone 13</h1>
+            <p class="fs-5 text-secondary mb-4">Smartphones</p>
+            <div class="d-flex flex-row mb-3">
+              <!-- Rating -->
+              <div class="rating">
+                <!-- Full Star -->
+              </div>
+              <span class="mt-2 text-secondary">4.5 out of 5</span>
+            </div>
+            <p class="fw-bolder fs-1 mb-3">$799</p>
+            <p class="fs-6 mb-4">
+              The latest iPhone with amazing camera capabilities and powerful
+              A15 Bionic chip.
+            </p>
+            <div class="p-3 border rounded mb-3">
+              <div
+                class="d-flex align-items-center gap-2 text-success fw-semibold"
+              >
+                <div class="w-5 h-5">
+                  <i class="bi bi-truck"></i>
+                </div>
+                <span>Free shipping on orders over $100</span>
+              </div>
+              <div
+                class="d-flex align-items-center gap-2 text-primary fw-semibold"
+              >
+                <div class="w-5 h-5">
+                  <i class="bi bi-arrow-right"></i>
+                </div>
+                <span>30-day return policy</span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center justify-md-content-start mb-4">
+            <button class="minus btn btn-outline-dark">
+              <i class="bi bi-dash fs-5"></i>
+            </button>
+            <span class="counter mx-4 fs-2">1</span>
+            <button class="plus btn btn-outline-dark">
+              <i class="bi bi-plus fs-5"></i>
+            </button>
+          </div>
+          <button class="w-100 btn btn-dark mb-4">Add to Cart</button>
+        </div>
+      </div>
+      <div
+        class="btn-group border mb-2"
+        role="group"
+        aria-label="Buttons information"
+      >
+        <button class="btn btn-information-feat bg-light" aria-label="Features">
+          Features
+        </button>
+        <button class="btn btn-information-spec" aria-label="Specifications">
+          Specifications
+        </button>
+      </div>
+      <div class="feats border rounded">
+        <div class="p-4">
+          <ul class="pl-5">
+            <li>6.1-inch Super Retina XDR display</li>
+            <li>Dual 12MP camera system</li>
+            <li>A15 Bionic chip</li>
+            <li>5G capable</li>
+            <li>Face ID for secure authentication</li>
+          </ul>
+        </div>
+      </div>
+      <div class="specs border rounded hidden">
+        <div>
+          <div class="p-4">
+            <dl class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2">
+              <div className="grid grid-cols-2">
+                <dt className="font-semibold">Display:</dt>
+                <dd>6.1-inch Super Retina XDR display</dd>
+              </div>
+              <div class="grid grid-cols-2">
+                <dt class="font-semibold">Chip:</dt>
+                <dd>A15 Bionic chip</dd>
+              </div>
+              <div class="grid grid-cols-2">
+                <dt class="font-semibold">Camera:</dt>
+                <dd>Dual 12MP camera system</dd>
+              </div>
+              <div class="grid grid-cols-2">
+                <dt class="font-semibold">Front Camera:</dt>
+                <dd>12MP TrueDepth front camera</dd>
+              </div>
+              <div class="grid grid-cols-2">
+                <dt class="font-semibold">Capacity:</dt>
+                <dd>128GB, 256GB, 512GB</dd>
+              </div>
+              <div class="grid grid-cols-2">
+                <dt class="font-semibold">Water Resistance:</dt>
+                <dd>IP68 (maximum depth of 6 meters up to 30 minutes)</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="custom-footer text-white text-center py-3 mt-4">
+      <p>&copy; 2024 ElectroHub. Todos los derechos reservados.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/detailPage.js"></script>
+  </body>
+</html>
