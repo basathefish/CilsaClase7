@@ -1,0 +1,37 @@
+.figure-aspect{
+    cursor: pointer;
+    transition: background 0.3s, outline 0.3s;
+}
+
+.figure-aspect:hover{
+    background-color: #fdfdfd;
+    outline: 1px solid #000;
+}
+
+.figure-aspect-primary{
+    max-width: 370px;
+}
+
+/*Select div with aria-label*/
+div[aria-label="Buttons information"]{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    background-color: #e6e6e6;
+}
+
+.figure-aspect-square{
+    margin: auto;
+    width: 50px;
+    height: 90px;
+}
+
+@media (max-width: 768px){
+    .figure-aspect-primary{
+        width: 100%;
+    }
+}
+
+.hidden{
+    display: none;
+}
