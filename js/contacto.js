@@ -1,5 +1,6 @@
 document.querySelector('form').addEventListener('submit', function (event) {
-    event.preventDefault(); 
+    // event.preventDefault(); 
+    let isValid = true;
     
     // Obtener los valores de los campos y eliminar espacios
     const fields = {
@@ -19,30 +20,32 @@ document.querySelector('form').addEventListener('submit', function (event) {
     // Validación de campos vacíos
     for (const [key, value] of Object.entries(values)) {
         if (!value) {
-            alert(`Por favor, ingresa ${key}.`);
-            fields[key].focus();
-            return;
+            mostrarError('${key}', `Por favor, ingresa un ${key}.`);
         }
     }
 
     // Validación del formato del email
     if (!validateEmail(values.email)) {
-        alert('Por favor, ingresa un correo electrónico válido.');
-        fields.email.focus();
-        return;
+        isValid = false;
+        mostrarError('email', 'Por favor, ingresa un correo electrónico válido.');
     }
 
     // Validación de que el nombre no incluya números
     if (!validateName(values.nombre)) {
-        alert('El nombre no puede contener números ni caracteres especiales.');
-        fields.nombre.focus();
-        return;
+        isValid = false;
+        mostrarError('nombre', 'El nombre no puede contener números ni caracteres especiales.');
+    }
+    if (!isValid) {//si no es valido, no se envia
+        event.preventDefault();
+    }
+    else{
+        mostrarConfirmacion();
+        event.preventDefault();
+        document.querySelector('form').reset(); // Resetea todos los campos del formulario
     }
 
-    alert('Formulario enviado correctamente.');
 
     // Limpiar el formulario
- document.querySelector('form').reset(); // Resetea todos los campos del formulario
 });
 
 // Función para validar el formato del correo electrónico
@@ -55,4 +58,36 @@ function validateEmail(email) {
 function validateName(name) {
     const re = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/; // Expresión regular para letras (incluye acentos y ñ)
     return re.test(String(name).trim());
+}
+
+function mostrarError(campo, mensaje) {//show mensaje de error
+    const errorElement = document.getElementById(campo + '-error');
+
+    if (errorElement){//si existe el elemento
+        errorElement.textContent = mensaje;
+        //para el lector de pantalla
+        statusMessage.textContent = `Error en el campo ${campo}: ${mensaje}`;
+        //muestro el mensaje de error visualmente
+        errorElement.style.display = 'block';
+    }
+}
+function ocultarError(campo) {//hide mensaje de error
+    const errorElement = document.getElementById(campo + '-error');
+    errorElement.style.display = 'none';
+}
+
+function mostrarConfirmacion(){//mensaje confirmando el envio del formulario
+    //para el lector de pantalla
+    const statusMessage = document.getElementById('statusMessage');
+    statusMessage.textContent = 'El formulario se envió correctamente.';
+    
+    //muestro visualmente la confirmacion
+    const confirmacion = document.createElement('div');
+    confirmacion.className = 'confirmacion';
+    confirmacion.textContent = 'El formulario se envió correctamente.';
+    document.body.appendChild(confirmacion);
+    
+    setTimeout(function(){//elimino el mensaje de confirmacion a los 3seg
+        confirmacion.remove();
+    }, 3000);
 }
