@@ -21,6 +21,8 @@ document.querySelector('form').addEventListener('submit', function (event) {
     for (const [key, value] of Object.entries(values)) {
         if (!value) {
             mostrarError('${key}', `Por favor, ingresa un ${key}.`);
+        } else {
+            ocultarError('nombre');
         }
     }
 
