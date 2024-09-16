@@ -68,9 +68,10 @@ let cartCount = 0;
 
 // Función para aumentar el contador del carrito según la cantidad seleccionada
 function addToCart() {
-  const selectedQuantity = parseInt(counter.textContent); '
+  const selectedQuantity = parseInt(counter.textContent); 
   cartCount += selectedQuantity; 
-  cartCountElement.textContent = cartCount; 
+  cartCountElement.textContent = cartCount;
+}
 
 // Escuchar el evento de click en el botón "Add to Cart"
 addToCartButton.addEventListener('click', addToCart);
