@@ -28,13 +28,18 @@ document.querySelector('form').addEventListener('submit', function (event) {
     if (!validateEmail(values.email)) {
         isValid = false;
         mostrarError('email', 'Por favor, ingresa un correo electrónico válido.');
+    } else {
+        ocultarError('email');
     }
 
     // Validación de que el nombre no incluya números
     if (!validateName(values.nombre)) {
         isValid = false;
         mostrarError('nombre', 'El nombre no puede contener números ni caracteres especiales.');
+    } else {
+        ocultarError('nombre');
     }
+
     if (!isValid) {//si no es valido, no se envia
         event.preventDefault();
     }
