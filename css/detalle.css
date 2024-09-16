@@ -1,0 +1,49 @@
+
+.figure-aspect-primary-big{
+    width: 380px;
+    height: 480px;
+}
+
+#thumbnail{
+    cursor: pointer;
+    outline: invert;
+    transition: background 0.3s, outline 0.3s;
+}
+
+#thumbnail:hover{
+    background-color: #000000;
+    outline: 1px solid #000;
+}
+
+.thumbnail, .figure-aspect-primary{
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Select div with aria-label*/
+div[aria-label="Buttons information"]{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    background-color: #e6e6e6;
+}
+
+.figure-aspect-square{
+    margin: auto;
+    width: 50px;
+    height: 90px;
+}
+
+.hidden{
+    display: none;
+}
+
+@media (max-width: 768px){
+    .figure-aspect-primary-big{
+        max-width: 350px;
+    }
+    .figure-aspect-square{
+        width: 40px;
+        height: 0px;
+    }
+}
